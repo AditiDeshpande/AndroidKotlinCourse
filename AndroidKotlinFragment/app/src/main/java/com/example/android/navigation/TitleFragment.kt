@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.android.navigation.databinding.FragmentTitleBinding
 
+/*
+This codelab is from following course
+Android Kotlin Fundamentals: Create a fragment
+ */
 class TitleFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
