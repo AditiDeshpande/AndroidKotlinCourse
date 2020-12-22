@@ -39,5 +39,7 @@
     <string name="question_article">LIKE THE COLOUR THEME? </string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="yes_message">COLOUR THEME: Like</string>
+    <string name="no_message">COLOUR THEME : Thanks</string>
 
 </resources>

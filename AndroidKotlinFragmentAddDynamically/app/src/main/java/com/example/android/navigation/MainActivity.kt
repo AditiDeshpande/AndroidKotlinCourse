@@ -17,6 +17,9 @@
 package com.example.android.navigation
 
 import android.os.Bundle
+import android.view.View
+import android.widget.RadioButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentTransaction
@@ -45,6 +48,31 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    //Dynamically add simple_fragment to activity here
 
+     fun onRadioButtonClicked(view: View) {
+
+        if (view is RadioButton) {
+
+            val checked = view.isChecked
+            //Foll TextView is from Fragment's layout it's npt accessible here will refactor the code
+            //later to make this work
+            //val textView: TextView = rootView!!.findViewById<TextView>(R.id.fragment_header)
+            //Check which radio button was clicked
+            when (view.getId()) {
+                R.id.radio_button_yes ->
+                    if (checked) {
+                        //textView.setText(R.string.yes_message)
+                        Toast.makeText( applicationContext, R.string.yes_message , Toast.LENGTH_SHORT).show()
+
+                    }
+                R.id.radio_button_no ->
+                    if (checked) {
+                        //textView.setText(R.string.no_message)
+                        Toast.makeText( applicationContext, R.string.no_message , Toast.LENGTH_SHORT).show()
+                    }
+
+            }
+
+        }
+    }
 }
